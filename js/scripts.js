@@ -79,13 +79,29 @@ $(document).ready(function() {
       } else {
         var isItAOne = numbersByDigits(i);
         console.log(isItAOne);
-        for (var i = 0; i < isItAOne.length; i++) {
-          if (isItAOne[i] === "1") {
-            console.log("you are a winner");
-          } else {
-             console.log("loser");
-           }
+        for (var i = 0; i < countedNumbers.length; i++) {
+          for (var i = 0; i < isItAOne.length; i++) {
+            if (isItAOne[i] === "1") {
+              console.log("boop");
+              var boop = ["boop"];
+              isItAOne[i] = boop
+              isItAOne[i] === countedNumbers.length;
+              break;
+            } else if (isItAOne[i] === "0") {
+              console.log("beep");
+              var beep = ["beep"];
+              isItAOne[i] = beep
+              isItAOne[i] === countedNumbers.length;
+              break;
+            }else if (undefined) {
+               console.log("loser");
+               isItAOne[i] === countedNumbers.length;
+               break;
+             }
+             countedNumbers[i] = countedNumbers.length;
+          }
         }
+
 
 
         }
