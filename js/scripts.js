@@ -67,13 +67,15 @@ $(document).ready(function() {
     countedNumbers(milesToTravel);
     // alert(countedNumbers);
 
-    for (var i = 0; i < countedNumbers.length; i++) {
-      if ((countedNumbers[i] % 3) === 0) {
-        console.log("divisible by 3")
-      } else if (i === 13) {
-          console.log("parse number here");
-          // numbersByDigits(i);
-            console.log(numbersByDigits(13));
+
+
+    for (i = 0; i < countedNumbers.length; i++) {
+      if (i === 0) { console.log("it continued"); i = (i+1);}
+      if (((countedNumbers[i] - 1) % 3) === 0) {
+        console.log("divisible by 3" + i)
+      } else {
+          console.log("second loop" + i);
+            // console.log(numbersByDigits(i));
 
           // "convert number to array to compare each digit"
           // if (number has 1) {
@@ -81,8 +83,6 @@ $(document).ready(function() {
           // } else if (number has 0) {
           //   "output beep"
           // }
-      } else {
-        console.log("display nothing for this number");
       }
     }
 
