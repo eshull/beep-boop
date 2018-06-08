@@ -1,36 +1,14 @@
 var countedNumbers = function(number) {
   var i = 0;
-  var x = 0;
   var array = [];
   while (i < number) {
     i++;
     console.log(i);
-    console.log(x);
     array.push(i)
   }
-return array;
+countedNumbers = array;
+
 }
-
-
-// var countedNumbers;
-// for (number = 0; number < 10; number++) {
-//   // Runs 5 times, with values of step 0 through 4.
-//   countedNumbers.push(number);
-//   console.log(number);
-// }
-// console.log(countedNumbers);
-//
-//
-// var numberCount = function(input) {
-//   for (var i = 0; i < input.length; i++) {
-//     console.log([i]);
-//     var numberArray = [i];
-//     // var numberArray = push(argument)
-//   }
-//   return numberArray;
-//
-// }
-
 
 
 
@@ -41,7 +19,8 @@ $(document).ready(function() {
 
     var milesToTravel = parseInt($("#userMiles").val());
 
-      console.log(countedNumbers(milesToTravel));
+    countedNumbers(milesToTravel);
+    alert(countedNumbers);
 
 
   });
