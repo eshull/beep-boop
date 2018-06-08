@@ -11,14 +11,23 @@ countedNumbers = array;
 
 var numbersByDigits = function(integer) {
 
-  var number = integer
-  var i = number
-      output = [],
-      stringNumber = number.toString();
-
+  var number = toString(integer);
+  var output = [];
+  var stringNumber = number.split("");
+  var i = number;
   for (i = 0; i < stringNumber.length; i ++) {
-    output.slice(stringNumber.charAt(i));
-    output.slice(stringNumber.charAt(i));
+      // output.pop((i));
+      // output.pop((i));
+      output.push(stringNumber.pop());
+        output.push(stringNumber.pop());
+        output.push(stringNumber.pop());
+        output.push(stringNumber.pop());
+        output.push(stringNumber.pop());
+        output.push(stringNumber.pop());
+        output.push(stringNumber.pop());
+        output.push(stringNumber.pop());
+        output.push(stringNumber.pop());
+
       // output.push(+stringNumber.charAt(i));
       // output.push(+stringNumber.charAt(i));
       // console.log(output);
@@ -28,7 +37,21 @@ var numbersByDigits = function(integer) {
   }
 
 }
-
+// var numbersByDigits = function(integer) {
+//   var quoteArray = integer.split("");
+// }
+// function zeroOrOne(a, b) {
+//   var zero = a
+//   var one = b
+//   if (zero === 0) {
+//     return 'it has a zero';
+//   } else if (one === 1) {
+//     return 'it has a one';
+//   } else {
+//     return 'Does NOT fit!';
+//   }
+//
+// }
 
 
 $(document).ready(function() {
@@ -39,12 +62,12 @@ $(document).ready(function() {
     var milesToTravel = parseInt($("#userMiles").val());
 
     countedNumbers(milesToTravel);
-    alert(countedNumbers);
+    // alert(countedNumbers);
 
     for (var i = 0; i < countedNumbers.length; i++) {
       if ((countedNumbers[i] % 3) === 0) {
         console.log("divisible by 3")
-      } else if (i < countedNumbers.length) {
+      } else if (i <= countedNumbers.length) {
 
           numbersByDigits(i);
             console.log(numbersByDigits(i));
