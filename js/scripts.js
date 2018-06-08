@@ -1,12 +1,14 @@
 var countedNumbers = function(number) {
   var i = 0;
   var x = 0;
-  while (i =< number) {
-    // Runs 5 times, with values of step 0 through 4.
+  var array = [];
+  while (i < number) {
     i++;
-    x += i;
     console.log(i);
+    console.log(x);
+    array.push(i)
   }
+return array;
 }
 
 
@@ -40,18 +42,11 @@ $(document).ready(function() {
     var milesToTravel = parseInt($("#userMiles").val());
 
       console.log(countedNumbers(milesToTravel));
-    // var milesArray = function(miles) {
-    //   for (var i=0; i<=miles; i++) {
-    //     if ([i] === 1) {
-    //       console.log("first");
-    //     }
-    //     else if ([i] === 2) {
-    //       console.log("second");
-    //     }
+
 
   });
 
-    });
+});
 
 
 
