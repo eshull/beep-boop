@@ -77,8 +77,19 @@ $(document).ready(function() {
         console.log("divisible by 3" + replace)
 
       } else {
-          console.log("second loop" + i);
-            // console.log(numbersByDigits(i));
+        var isItAOne = numbersByDigits(i);
+        console.log(isItAOne);
+        for (var i = 0; i < isItAOne.length; i++) {
+          if (isItAOne === "1") {
+            console.log("you are a winner");
+            [i] = isItAOne.length 
+          }
+        }
+
+
+
+          // console.log("second loop" + i);
+          //   console.log(numbersByDigits(i));
 
           // "convert number to array to compare each digit"
           // if (number has 1) {
