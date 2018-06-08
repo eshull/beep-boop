@@ -80,14 +80,15 @@ $(document).ready(function() {
         var isItAOne = numbersByDigits(i);
         console.log(isItAOne);
         for (var i = 0; i < isItAOne.length; i++) {
-          if (isItAOne === "1") {
+          if (isItAOne[i] === "1") {
             console.log("you are a winner");
-            [i] = isItAOne.length 
-          }
+          } else {
+             console.log("loser");
+           }
         }
 
 
-
+        }
           // console.log("second loop" + i);
           //   console.log(numbersByDigits(i));
 
@@ -97,10 +98,10 @@ $(document).ready(function() {
           // } else if (number has 0) {
           //   "output beep"
           // }
-      }
-    }
+    //   }
+    // }
 return replace;
-
+}
   });
 
 });
