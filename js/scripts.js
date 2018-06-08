@@ -1,3 +1,4 @@
+var digits = [];
 var countedNumbers = function(number) {
   var i = 0;
   var array = [];
@@ -11,11 +12,12 @@ countedNumbers = array;
 
 var numbersByDigits = function(integer) {
 
-  var number = toString(integer);
-  var output = [];
+  var number = integer.toString();
+  console.log(number);
   var stringNumber = number.split("");
-  var i = number;
-  for (i = 0; i < stringNumber.length; i ++) {
+  var output = [];
+
+  for (var i = 0; i < stringNumber.length; i ++) {
       // output.pop((i));
       // output.pop((i));
       output.push(stringNumber.pop());
@@ -27,16 +29,17 @@ var numbersByDigits = function(integer) {
         output.push(stringNumber.pop());
         output.push(stringNumber.pop());
         output.push(stringNumber.pop());
-
+        return output;
+        // numbersByDigits.push(output);
       // output.push(+stringNumber.charAt(i));
       // output.push(+stringNumber.charAt(i));
       // console.log(output);
-      console.log(output);
-      return output;
+      // console.log(output);
+      // return output;
 
   }
-
 }
+
 // var numbersByDigits = function(integer) {
 //   var quoteArray = integer.split("");
 // }
@@ -67,10 +70,11 @@ $(document).ready(function() {
     for (var i = 0; i < countedNumbers.length; i++) {
       if ((countedNumbers[i] % 3) === 0) {
         console.log("divisible by 3")
-      } else if (i <= countedNumbers.length) {
+      } else if (i === 13) {
+          console.log("parse number here");
+          // numbersByDigits(i);
+            console.log(numbersByDigits(13));
 
-          numbersByDigits(i);
-            console.log(numbersByDigits(i));
           // "convert number to array to compare each digit"
           // if (number has 1) {
           //   "output Boop"
