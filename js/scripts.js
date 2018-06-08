@@ -70,37 +70,40 @@ $(document).ready(function() {
 
 
     for (i = 0; i < countedNumbers.length; i++) {
-      if (i === 0) { console.log("it continued"); i = (i+1);}
+      // if (i === 0) { console.log("it continued"); i = (i+1);}
       if (((countedNumbers[i] - 1) % 3) === 0) {
         var replace = ["I'm sorry, Dave. I'm afraid I can't do that."];
         countedNumbers[i] = replace
         console.log("divisible by 3" + replace)
 
-      } else {
-        var isItAOne = numbersByDigits(i);
-        console.log(isItAOne);
-        for (var i = 0; i < countedNumbers.length; i++) {
-          for (var i = 0; i < isItAOne.length; i++) {
-            if (isItAOne[i] === "1") {
-              console.log("boop");
-              var boop = ["boop"];
-              isItAOne[i] = boop
-              isItAOne[i] === countedNumbers.length;
-              break;
-            } else if (isItAOne[i] === "0") {
-              console.log("beep");
-              var beep = ["beep"];
-              isItAOne[i] = beep
-              isItAOne[i] === countedNumbers.length;
-              break;
-            }else if (undefined) {
-               console.log("loser");
-               isItAOne[i] === countedNumbers.length;
-               break;
-             }
-             countedNumbers[i] = countedNumbers.length;
+      } else if ((countedNumbers.length) > 0){
+        console.log("are we there");
+          var isItAOne = numbersByDigits(i);
+          console.log(isItAOne);
+          for (var i = 0; i < countedNumbers.length; i++) {
+            for (var i = 0; i < isItAOne.length; i++) {
+              if (isItAOne[i] === "1") {
+                console.log("boop");
+                var boop = ["boop"];
+                isItAOne[i] = boop
+                // return boop;
+                isItAOne[i] === countedNumbers.length;
+                // break;
+              } if (isItAOne[i] === "0") {
+                console.log("beep");
+                var beep = ["beep"];
+                isItAOne[i] = beep
+                // return beep;
+                isItAOne[i] === countedNumbers.length;
+                // break;
+              } else if (undefined){
+                console.log("loser");
+              return ("");
+
+               }
+               // countedNumbers[i] = countedNumbers.length;
+            }
           }
-        }
 
 
 
@@ -116,7 +119,7 @@ $(document).ready(function() {
           // }
     //   }
     // }
-return replace;
+return (replace + beep + boop);
 }
   });
 
