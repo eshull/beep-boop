@@ -7,7 +7,6 @@ var countedNumbers = function(number) {
     array.push(i)
   }
 countedNumbers = array;
-
 }
 
 
@@ -22,30 +21,15 @@ $(document).ready(function() {
     countedNumbers(milesToTravel);
     alert(countedNumbers);
 
+    for (var i = 0; i < countedNumbers.length; i++) {
+      if ((countedNumbers[i] % 3) === 0) {
+        console.log("divisible by 3");
+      } else {
+        console.log("not working");
+      }
+    }
+
 
   });
 
 });
-
-
-
-
-    //
-    // var milesArray = function(miles) {
-    //   for (var i = 0; i < miles; i++) {
-    //     var poppedMiles = miles.push();
-    //     console.log(miles + "for loop");
-    //     if (milesToTravel[i] >= 0) {
-    //
-    //
-    //                 console.log(poppedMiles);
-    //       return poppedMiles;
-    //     }
-    //   }
-    // };
-
-    // var milesArray = function(miles) {
-    //     var poppedMiles = miles.splice();
-    //     return poppedMiles;
-    // };
-    // console.log(poppedMiles);
