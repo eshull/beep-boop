@@ -72,7 +72,10 @@ $(document).ready(function() {
     for (i = 0; i < countedNumbers.length; i++) {
       if (i === 0) { console.log("it continued"); i = (i+1);}
       if (((countedNumbers[i] - 1) % 3) === 0) {
-        console.log("divisible by 3" + i)
+        var replace = ["I'm sorry, Dave. I'm afraid I can't do that."];
+        countedNumbers[i] = replace
+        console.log("divisible by 3" + replace)
+
       } else {
           console.log("second loop" + i);
             // console.log(numbersByDigits(i));
@@ -85,7 +88,7 @@ $(document).ready(function() {
           // }
       }
     }
-
+return replace;
 
   });
 
