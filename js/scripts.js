@@ -159,7 +159,6 @@ $(document).ready(function() {
     var milesToTravel = parseInt($("#userMiles").val());
 
     countedNumbers(milesToTravel);
-    // alert(countedNumbers);
     var finalArray = [];
 
 
@@ -218,7 +217,11 @@ $(document).ready(function() {
       }
       console.log(finalArray);
       var finalQuote = finalArray.join(" ");
-      alert(finalQuote);
+      // alert(finalQuote);
+      $(".showResults").html("<div>"+ finalQuote + "</div>");
+      $(".showResults").show();
+
+
   });
 
 });
