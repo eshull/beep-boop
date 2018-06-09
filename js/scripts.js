@@ -159,14 +159,15 @@ $(document).ready(function() {
     var milesToTravel = parseInt($("#userMiles").val());
 
     countedNumbers(milesToTravel);
-    alert(countedNumbers);
-
+    // alert(countedNumbers);
+    var finalArray = [];
 
 
 
     for (i = 0; i < countedNumbers.length; i++) {
 
       console.log(isItAOne);
+
 
       if (((countedNumbers[i] - 1) % 3) === 0) {
         var replace = ["I'm sorry, Dave. I'm afraid I can't do that."];
@@ -179,7 +180,7 @@ $(document).ready(function() {
 
         var isItAOne = numbersByDigits(i);
             for (var k = 0; k < isItAOne.length; k++) {
-
+              // finalArray.pop(isItAOne);
 
               if (isItAOne[k] === "1") {
                 // console.log("boop");
@@ -188,8 +189,9 @@ $(document).ready(function() {
                 isItAOne[k] === countedNumbers.length;
               } else if (isItAOne[k] === "0") {
                 // console.log("beep");
-                // var beep = ["beep"];
-                isItAOne[k] = "beep";
+                var beep = ["beep"];
+                isItAOne[k] = beep;
+                finalArray.push(beep);
                 isItAOne[k] === countedNumbers.length;
               } else if (undefined){
                 // console.log("loser");
@@ -206,7 +208,8 @@ $(document).ready(function() {
 
       countedNumbers[i] === countedNumbers.length;
       }
-
+      var finalQuote = finalArray.join("");
+      alert(finalQuote);
   });
 
 });
