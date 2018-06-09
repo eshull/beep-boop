@@ -184,8 +184,9 @@ $(document).ready(function() {
 
               if (isItAOne[k] === "1") {
                 // console.log("boop");
-                // var boop = ["boop"];
-                isItAOne[k] = "boop"
+                var boop = ["boop"];
+                isItAOne[k] = boop
+                finalArray.push(boop);
                 isItAOne[k] === countedNumbers.length;
               } else if (isItAOne[k] === "0") {
                 // console.log("beep");
@@ -200,7 +201,9 @@ $(document).ready(function() {
                 isItAOne[k] === countedNumbers.length;
                }
                else {
-                 isItAOne[k] = "M"
+                 var numValue = [i];
+                 // isItAOne[k] = numValue
+                 finalArray.push(numValue);
                 countedNumbers[k] === countedNumbers.length;
                }
             }
@@ -208,7 +211,7 @@ $(document).ready(function() {
 
       countedNumbers[i] === countedNumbers.length;
       }
-      var finalQuote = finalArray.join("");
+      var finalQuote = finalArray.join(" ");
       alert(finalQuote);
   });
 
