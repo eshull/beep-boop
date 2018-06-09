@@ -1,10 +1,10 @@
-var digits = [];
+
 var countedNumbers = function(number) {
   var i = 0;
   var array = [];
   while (i < number) {
     i++;
-    console.log(i);
+    // console.log(i);
     array.push(i)
   }
 countedNumbers = array;
@@ -13,7 +13,7 @@ countedNumbers = array;
 var numbersByDigits = function(integer) {
 
   var number = integer.toString();
-  console.log(number);
+  // console.log(number);
   var stringNumber = number.split("");
   var output = [];
 
@@ -22,13 +22,13 @@ var numbersByDigits = function(integer) {
       // output.pop((i));
       output.push(stringNumber.pop());
         output.push(stringNumber.pop());
-        output.push(stringNumber.pop());
-        output.push(stringNumber.pop());
-        output.push(stringNumber.pop());
-        output.push(stringNumber.pop());
-        output.push(stringNumber.pop());
-        output.push(stringNumber.pop());
-        output.push(stringNumber.pop());
+        // output.push(stringNumber.pop());
+        // output.push(stringNumber.pop());
+        // output.push(stringNumber.pop());
+        // output.push(stringNumber.pop());
+        // output.push(stringNumber.pop());
+        // output.push(stringNumber.pop());
+        // output.push(stringNumber.pop());
         return output;
         // numbersByDigits.push(output);
       // output.push(+stringNumber.charAt(i));
@@ -65,7 +65,8 @@ $(document).ready(function() {
     var milesToTravel = parseInt($("#userMiles").val());
 
     countedNumbers(milesToTravel);
-    // alert(countedNumbers);
+    alert(countedNumbers);
+
 
 
 
@@ -75,13 +76,17 @@ $(document).ready(function() {
         var replace = ["I'm sorry, Dave. I'm afraid I can't do that."];
         countedNumbers[i] = replace
         console.log("divisible by 3" + replace)
+        // debugger;
 
-      } else if ((countedNumbers.length) > 0){
+      } else if (countedNumbers[i] > 1) {
         console.log("are we there");
           var isItAOne = numbersByDigits(i);
           console.log(isItAOne);
-          for (var i = 0; i < countedNumbers.length; i++) {
+
+
+
             for (var i = 0; i < isItAOne.length; i++) {
+
               if (isItAOne[i] === "1") {
                 console.log("boop");
                 var boop = ["boop"];
@@ -89,7 +94,7 @@ $(document).ready(function() {
                 // return boop;
                 isItAOne[i] === countedNumbers.length;
                 // break;
-              } if (isItAOne[i] === "0") {
+              } else if (isItAOne[i] === "0") {
                 console.log("beep");
                 var beep = ["beep"];
                 isItAOne[i] = beep
@@ -98,12 +103,13 @@ $(document).ready(function() {
                 // break;
               } else if (undefined){
                 console.log("loser");
-              return ("");
+                isItAOne[i] === countedNumbers.length;
+              // return ("");
 
                }
                // countedNumbers[i] = countedNumbers.length;
             }
-          }
+
 
 
 
@@ -119,7 +125,9 @@ $(document).ready(function() {
           // }
     //   }
     // }
-return (replace + beep + boop);
+    // debugger;
+// return (replace + beep + boop);
+countedNumbers[i] === countedNumbers.length;
 }
   });
 
