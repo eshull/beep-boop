@@ -1,14 +1,19 @@
-
 // function to count out all numbers up to input
 var countedNumbers = function(number) {
   var i = 0;
   var array = [];
+  // var countedNumbers = [];
   while (i < number) {
     i++;
     array.push(i)
+    // return countedNumbers;
+    // return [i];
   }
-countedNumbers = array;
+  // return array;
+  countedNumbers = array
+
 }
+
 
 // function to turn numbers into a string in an array
 var numbersByDigits = function(integer) {
@@ -79,10 +84,17 @@ $(document).ready(function() {
       }
       console.log(finalArray);
       var finalQuote = finalArray.join(" ");
+      $(".results").text(finalQuote);
       // alert(finalQuote);
       // $(".showResults").addClass();
+      $("#theForm").click(function(){
+      $(".results").toggle();
 
-
+      });
+      // $("#theForm").click(function(){
+      //     $(".results").show();
+      //   });
+      //
       // $(".showResults").show();
       // $(".results").show();
 
