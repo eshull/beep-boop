@@ -166,7 +166,7 @@ $(document).ready(function() {
 
     for (i = 0; i < countedNumbers.length; i++) {
 
-      console.log(isItAOne + "yoshi");
+      console.log(isItAOne);
 
       if (((countedNumbers[i] - 1) % 3) === 0) {
         var replace = ["I'm sorry, Dave. I'm afraid I can't do that."];
@@ -182,22 +182,23 @@ $(document).ready(function() {
 
 
               if (isItAOne[k] === "1") {
-                console.log("boop");
-                var boop = ["boop"];
-                isItAOne[k] = boop
+                // console.log("boop");
+                // var boop = ["boop"];
+                isItAOne[k] = "boop"
                 isItAOne[k] === countedNumbers.length;
               } else if (isItAOne[k] === "0") {
-                console.log("beep");
-                var beep = ["beep"];
-                isItAOne[k] = beep
+                // console.log("beep");
+                // var beep = ["beep"];
+                isItAOne[k] = "beep";
                 isItAOne[k] === countedNumbers.length;
               } else if (undefined){
-                console.log("loser");
-                var empty = ("")
-                isItAOne[k] = empty;
+                // console.log("loser");
+                // var empty = ("#")
+                isItAOne[k] = "#"
                 isItAOne[k] === countedNumbers.length;
                }
                else {
+                 isItAOne[k] = "M"
                 countedNumbers[k] === countedNumbers.length;
                }
             }
