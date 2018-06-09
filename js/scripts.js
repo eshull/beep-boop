@@ -170,47 +170,53 @@ $(document).ready(function() {
 
 
       if (((countedNumbers[i] - 1) % 3) === 0) {
-        var replace = ["I'm sorry, Dave. I'm afraid I can't do that."];
+        var replace = [' "I am sorry, Dave. I am afraid I cannot do that." '];
         countedNumbers[i] = replace
         console.log("divisible by 3" + replace)
+        finalArray.push(replace)
+        countedNumbers[i] === countedNumbers.length;
+
 
 
 
       } else {
-
+        console.log("here");
         var isItAOne = numbersByDigits(i);
             for (var k = 0; k < isItAOne.length; k++) {
               // finalArray.pop(isItAOne);
-
-              if (isItAOne[k] === "1") {
+              if (undefined) {
+                isItAOne[k] = "#"
+                isItAOne[i] === countedNumbers.length;
+              } else if (isItAOne[k] === "1") {
                 // console.log("boop");
                 var boop = ["boop"];
                 isItAOne[k] = boop
                 finalArray.push(boop);
-                isItAOne[k] === countedNumbers.length;
+                isItAOne[i] === countedNumbers.length;
               } else if (isItAOne[k] === "0") {
                 // console.log("beep");
                 var beep = ["beep"];
                 isItAOne[k] = beep;
                 finalArray.push(beep);
-                isItAOne[k] === countedNumbers.length;
-              } else if (undefined){
-                // console.log("loser");
-                // var empty = ("#")
-                isItAOne[k] = "#"
-                isItAOne[k] === countedNumbers.length;
-               }
-               else {
+                isItAOne[i] === countedNumbers.length;
+              } else {
                  var numValue = [i];
                  // isItAOne[k] = numValue
                  finalArray.push(numValue);
-                countedNumbers[k] === countedNumbers.length;
-               }
+                 // isItAOne[k] = ([k] + 1)
+                isItAOne[i] === countedNumbers.length;
+              }
+              //  else {
+              //   var empty = ("")
+              //   finalArray.push(empty);
+              // }
+              break;
             }
           }
 
-      countedNumbers[i] === countedNumbers.length;
+      // countedNumbers[i] === countedNumbers.length;
       }
+      console.log(finalArray);
       var finalQuote = finalArray.join(" ");
       alert(finalQuote);
   });
