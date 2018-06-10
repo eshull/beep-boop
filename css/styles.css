@@ -6,3 +6,7 @@
 .gif {
   float: right;
 }
+
+body {
+  background-color: lightgrey;
+}
