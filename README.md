@@ -34,6 +34,10 @@
 
 * Eric's Site: (https://eshull.github.io/beep-boop/)
 
+## Known Bugs
+
+* The output for divisible by three doesn't work for the number you type in
+
 ## License
 
 

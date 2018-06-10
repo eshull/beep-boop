@@ -1,3 +1,8 @@
  .results {
   display: none;
+  font-size: 19px;
+}
+
+.gif {
+  float: right;
 }
