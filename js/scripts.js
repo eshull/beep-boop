@@ -61,10 +61,10 @@ $(document).ready(function() {
               break;
             }
           }
-      }
-      var finalQuote = finalArray.join(" ");
-      $(".results").text(finalQuote);
-      $(".showResults").show();
-      $(".results").show();
+        }
+    var finalQuote = finalArray.join(" ");
+    $(".results").text(finalQuote);
+    $(".showResults").show();
+    $(".results").show();
   });
 });
