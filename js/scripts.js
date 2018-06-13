@@ -1,12 +1,32 @@
 // function to count out all numbers up to input
 var countedNumbers = function(number) {
-  var i = 0;
+  console.log(number + "function reached");
   var array = [];
-  while (i < number) {
-    i++;
+  for (var i = 0; i <= number; i++) {
     array.push(i);
-  }
-  return array;
+    if (i % 3 === 0 && i !== 0){
+      array[i] = ' "I am sorry, Dave. I am afraid I cannot do that." ';
+    } else {
+        var string = [];
+        // returns 0 true or 1 false
+        string = numberToString(i);
+        if (string === false) {
+              array[i] = " beep";
+        } else if (string === true) {
+              array[i] = " boop";
+        }
+    }
+}
+return array;
+}
+
+var numberToString = function(number) {
+  var newString = number.toString().split("");
+  if (newString.includes("0")) {
+    return true;
+} else if (newString.includes("1")) {
+  return false;
+}
 }
 
 // function to turn numbers into a string in an array
@@ -27,43 +47,13 @@ $(document).ready(function() {
   $("#theForm").submit(function(event) {
     event.preventDefault();
     var milesToTravel = parseInt($("#userMiles").val());
+    console.log(milesToTravel);
     var numberArray = [];
-    var numberArray = countedNumbers(milesToTravel);
+    numberArray = countedNumbers(milesToTravel);
     var finalArray = [];
 
-    for (i = 1; i <= numberArray.length; i++) {
-      if (((numberArray[i] - 1) % 3) === 0) {
-        var replace = [' "I am sorry, Dave. I am afraid I cannot do that." '];
-        numberArray[i] = replace
-        finalArray.push(replace)
-        numberArray[i] === numberArray.length;
-      } else {
-        var isItAOne = numbersByDigits(i);
-            for (var k = 0; k < isItAOne.length; k++) {
-              if (undefined) {
-                isItAOne[k] = " "
-                isItAOne[i] === numberArray.length;
-              } else if (isItAOne[k] === "1") {
-                var boop = ["boop"];
-                isItAOne[k] = boop
-                finalArray.push(boop);
-                isItAOne[i] === numberArray.length;
-              } else if (isItAOne[k] === "0") {
-                var beep = ["beep"];
-                isItAOne[k] = beep;
-                finalArray.push(beep);
-                isItAOne[i] === numberArray.length;
-              } else {
-                 var numValue = [i];
-                 finalArray.push(numValue);
-                isItAOne[i] === numberArray.length;
-              }
-              break;
-            }
-          }
-        }
-    var finalQuote = finalArray.join(" ");
-    $(".results").text(finalQuote);
+    console.log(numberArray);
+    $(".results").text(numberArray);
     $(".showResults").show();
     $(".results").show();
   });
