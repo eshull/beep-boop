@@ -1,6 +1,4 @@
-// function to count out all numbers up to input
 var countedNumbers = function(number) {
-  console.log(number + "function reached");
   var array = [];
   for (var i = 0; i <= number; i++) {
     array.push(i);
@@ -19,40 +17,24 @@ var countedNumbers = function(number) {
 }
 return array;
 }
-
+// function to convert number to string and return true or false if 1 or 0
 var numberToString = function(number) {
-  var newString = number.toString().split("");
-  if (newString.includes("0")) {
-    return true;
-} else if (newString.includes("1")) {
-  return false;
-}
-}
-
-// function to turn numbers into a string in an array
-var numbersByDigits = function(integer) {
-
-  var number = integer.toString();
-  var stringNumber = number.split("");
-  var output = [];
-
-  for (var i = 0; i < stringNumber.length; i ++) {
-      output.push(stringNumber.pop());
-        output.push(stringNumber.pop());
-        return output;
+    var newString = number.toString().split("");
+    if (newString.includes("0")) {
+      return true;
+  } else if (newString.includes("1")) {
+    return false;
   }
 }
+
 
 $(document).ready(function() {
   $("#theForm").submit(function(event) {
     event.preventDefault();
     var milesToTravel = parseInt($("#userMiles").val());
-    console.log(milesToTravel);
     var numberArray = [];
     numberArray = countedNumbers(milesToTravel);
-    var finalArray = [];
 
-    console.log(numberArray);
     $(".results").text(numberArray);
     $(".showResults").show();
     $(".results").show();
